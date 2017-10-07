@@ -2,21 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	selector: 'my-app',
+	templateUrl: './app.component.html',
+	styleUrls: ['./css/nav.css']
 })
 
 export class AppComponent implements OnInit {
-  title = 'app';
+	title = 'Tour of Heroes';
+	results: string[];
 
-  results: string[];
+	constructor(private http: HttpClient) {};
 
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-  	this.http.get('url').subscribe(data => {
-  		this.results = data['results'];
-  	});
-  }
+	  ngOnInit(): void {
+	  	// this.http.get('url').subscribe(data => {
+	  	// 	this.results = data['results'];
+	  	// });
+	  };
 }
