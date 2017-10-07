@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'my-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css', '../css/button.css']
+  templateUrl: '../../html/heroes.component.html',
+  styleUrls: ['../../css/heroes.component.css', '../../css/button.css']
 })
 
 export class HeroesComponent {

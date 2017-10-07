@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
 	selector: 'my-app',
-	templateUrl: './app.component.html',
+	templateUrl: './html/app.component.html',
 	styleUrls: ['./css/nav.css']
 })
 
@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
 
 	constructor(private http: HttpClient) {};
 
-	  ngOnInit(): void {
-	  	// this.http.get('url').subscribe(data => {
-	  	// 	this.results = data['results'];
-	  	// });
-	  };
+	ngOnInit(): void {
+		// this.http.get('url').subscribe(data => {
+		// 	this.results = data['results'];
+		// });
+	};
 }
