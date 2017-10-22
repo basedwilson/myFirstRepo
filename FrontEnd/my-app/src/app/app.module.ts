@@ -9,6 +9,8 @@ import { HeroesComponent } from './scripts/components/heroes.component';
 import { HeroService } from './scripts/services/hero.service';
 import { DashboardComponent } from './scripts/components/dashboard.component';
 import { LoginComponent } from './scripts/components/login.component';
+import { EventsComponent } from './scripts/components/events.component';
+import { UserComponent } from './scripts/components/user.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { LoginComponent } from './scripts/components/login.component';
     HeroDetailComponent,
     HeroesComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    EventsComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

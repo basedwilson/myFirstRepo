@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-import { User } from '../models/User';
+import { Router }			from '@angular/router';
 
 @Component({
 	selector: 'login',
@@ -8,16 +7,16 @@ import { User } from '../models/User';
 })
 
 export class LoginComponent {
-	@Input() user: User;
-	@Input() newUser: User;
 
-	constructor() {};
+	constructor(private router: Router) {};
 
-	login(): void {
-
+	login(userName: string, password: string): void {
+		console.log(userName + ":" + password);
+		this.router.navigate(['events']);
 	}
 
-	signUp(): void {
-		
+	signUp(userName: string, phoneNumber:string, password: string): void {
+		console.log(userName + ":" + password + ":" + phoneNumber);
+		this.router.navigate(['events']);
 	}
 }

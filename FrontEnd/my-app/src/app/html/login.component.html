@@ -2,30 +2,30 @@
 	<h2>Welcome</h2>
 	<div>
 		<label>User Name</label>
-		<input type="text" [(ngModel)]="user.UserName" />
+		<input #userName type="text" userName.value='' />
 	</div>
 	<div>
 		<label>Password</label>
-		<input type="text" [(ngModel)]="user.Password" />
+		<input #password type="text" password.value='' />
 	</div>
 	<div>
-		<button (click)="login()">Login</button>
+		<button (click)="login(userName.value, password.value)">Login</button>
 	</div>
 
 	<h3>Create New Account</h3>
 	<div>
 		<label>User Name</label>
-		<input type="text" [(ngModel)]="newUser.UserName" />
+		<input type="text" #newUserName newUserName.value='' />
 	</div>
 	<div>
 		<label>PhoneNumber</label>
-		<input type="text" [(ngModel)]="newUser.PhoneNumber" />
+		<input type="text" #newPhoneNumber newPhoneNumber.value='' />
 	</div>
 	<div>
 		<label>Password</label>
-		<input type="text" [(ngModel)]="newUser.Password" />
+		<input type="text" #newPassword newPassword.value='' />
 	</div>
 	<div>
-		<button (click)="signUp">SignUp</button>
+		<button (click)="signUp(newUserName.value, newPhoneNumber.value, newPassword.value)">SignUp</button>
 	</div>
 </div>
